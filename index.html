@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>Fashion Driven</title>
+</head>
+
+<body>
+    <div>
+        <div class="topo">
+            <div class="logo">
+                <img src="./imagens/Logo.png" alt="">
+            </div>
+            <div>
+                <button class="usuario">
+                </button>
+            </div>
+        </div>
+        <div class="meio">
+            <div class="esquerda">
+                <div class="infocamisetas">
+                    <div class="modelo">
+                        <p>Escolha o modelo</p>
+                        <div class="op3">
+                            <div class="opcao">
+                                <div class="icone">
+                                    <img src="./imagens/tshirt.png">
+                                </div>
+                                <p>T-shirt</p>
+                            </div>
+                            <div class="opcao">
+                                <div class="icone">
+                                    <img src="./imagens/Camiseta.png">
+                                </div>
+                                <p>Camiseta</p>
+                            </div>
+                            <div class="opcao">
+                                <div class="icone">
+                                    <img src="./imagens/Mangalonga.png">
+                                </div>
+                                <p>Manga longa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modelo2">
+                        <p>Escolha a gola</p>
+                        <div class="op3">
+                            <div class="opcao">
+                                <div class="icone">
+                                    <img src="./imagens/GolaV.png">
+                                </div>
+                                <p>Gola V</p>
+                            </div>
+                            <div class="opcao">
+                                <div class="icone">
+                                    <img src="./imagens/GolaRedonda.png">
+                                </div>
+                                <p>Gola redonda</p>
+                            </div>
+                            <div class="opcao">
+                                <div class="icone">
+                                    <img src="./imagens/GolaPolo.png">
+                                </div>
+                                <p>Gola polo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modelo2">
+                        <p>Escolha o tecido</p>
+                        <div class="op3">
+                            <div class="opcao">
+                                <div class="icone">
+                                    <img src="./imagens/Seda.png">
+                                </div>
+                                <p>Seda</p>
+                            </div>
+                            <div class="opcao">
+                                <div class="icone">
+                                    <img src="./imagens/Algodão.png">
+                                </div>
+                                <p>Algodão</p>
+                            </div>
+                            <div class="opcao">
+                                <div class="icone">
+                                    <img src="./imagens/Poliester.png">
+                                </div>
+                                <p>Poliester</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="linkcamiseta">
+                        <p>Imagem de referência</p>
+                        <input type="Insira o link">
+                    </div>
+                    <button class="pedido">
+                        Confirmar pedido
+                    </button>
+                </div>
+            </div>
+            <div class="direita">
+                <img src="./imagens/ilustração.png">
+            </div>
+        </div>
+        <div class="baixo">
+            <div class="ultpedidos">
+                    <p>Últimos pedidos</p>
+                    <div class="filtros">
+                        <button>Todos os modelos</button>
+                        <button>T-shirts</button>
+                        <button>Camiseta</button>
+                        <button>Manga longa</button>
+                    </div>
+                    <div class="pedidosantigos">
+                        <div class="antigos">
+                        <img src="./imagens/Blusa1.png">
+                        <p>Criador: <strong>Agata</strong></p>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <button onClick="getRequest()">Requisição GET</button>
+    <button onClick="postRequest()">Requisição POST</button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
