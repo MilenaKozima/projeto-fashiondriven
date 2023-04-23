@@ -1,24 +1,24 @@
 * {
     box-sizing: border-box;
-  }
+}
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
 }
 
-.topo{
+.topo {
     width: 1366px;
     height: 89px;
-    background: #404EED;    
+    background: #404EED;
     display: flex;
     align-items: center;
 }
 
-.logo{
+.logo {
     margin-left: 80px;
 }
 
-.usuario{
+.usuario {
     margin-left: 646px;
     width: 248px;
     height: 39px;
@@ -28,42 +28,42 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-.nome{
+.nome {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 18px;
 }
 
-.meio{
+.meio {
     display: flex;
 }
 
-.esquerda{
+.esquerda {
     width: 696px;
-    background-color:#FCFCFC;
+    background-color: #FCFCFC;
     display: flex;
     justify-content: center;
 }
 
-.infocamisetas{
+.infocamisetas {
     margin-top: 38px;
     width: 399px;
     background-color: #FCFCFC;
 }
 
-.modelo p{
+.modelo p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
 }
 
-.op3{
+.op3 {
     margin-top: 8px;
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
-.icone{
+.icone {
     width: 100px;
     height: 100px;
     border-radius: 50px;
@@ -74,38 +74,38 @@ justify-content: space-between;
     border: 0.5px solid #C4C4C4;
 }
 
-.opcao{
+.opcao {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.opcao p{
+.opcao p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 18px; 
+    font-size: 18px;
     margin-top: 8px;
 }
 
-.modelo2{
+.modelo2 {
     margin-top: 31px;
 }
 
-.modelo2 p{
+.modelo2 p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
 }
 
-.linkcamiseta p{
+.linkcamiseta p {
     margin-top: 33px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
 }
 
-input{
+input {
     width: 396px;
     height: 40px;
     margin-top: 10px;
@@ -113,7 +113,7 @@ input{
     background-color: #F2F2F2;
 }
 
-.pedido{
+.pedido {
     width: 398px;
     height: 40px;
     margin-top: 24px;
@@ -121,62 +121,75 @@ input{
     border-radius: 10px;
 }
 
-.direita{
+.direita {
     width: 670px;
     background-color: #404EED;
     display: flex;
     justify-content: center;
 }
 
-.baixo{
+.baixo {
     margin-top: 0;
-    background-color: red;
+    background-color: #F2F2F2;
     width: 1366px;
     display: flex;
 }
 
-.ultpedidos{
+.ultpedidos {
     margin-top: 30px;
     width: 1366px;
-    background-color: blue;
+    background-color: #F2F2F2;
     margin-left: 150px;
     margin-right: 90px;
 }
 
-.ultpedidos p{
+.ultpedidos p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
 }
 
-.filtros{
+.filtros {
     margin-top: 23px;
 }
 
-.filtros button{
+.filtros button {
     border-radius: 10px;
     background-color: #C4C4C4;
 }
 
-.pedidosantigos{
+.pedidosantigos {
     display: flex;
     margin-top: 25px;
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.antigos{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+.antigos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.antigos p{
+.antigos p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
 }
 
+.selecionadamodelo{
+    border: 3px solid #404EED;
+}
 
+.selecionagola{
+    border: 3px solid #404EED;
+}
 
+.selecionadatecido{
+    border: 3px solid #404EED;
+}
+
+.liberabotao{
+    background-color:  #32B72F;
+}

@@ -33,19 +33,19 @@
                         <p>Escolha o modelo</p>
                         <div class="op3">
                             <div class="opcao">
-                                <div class="icone">
+                                <div onclick="selecionarmodelo(this)" class="icone">
                                     <img src="./imagens/tshirt.png">
                                 </div>
                                 <p>T-shirt</p>
                             </div>
                             <div class="opcao">
-                                <div class="icone">
+                                <div onclick="selecionarmodelo(this)" class="icone">
                                     <img src="./imagens/Camiseta.png">
                                 </div>
                                 <p>Camiseta</p>
                             </div>
                             <div class="opcao">
-                                <div class="icone">
+                                <div onclick="selecionarmodelo(this)" class="icone">
                                     <img src="./imagens/Mangalonga.png">
                                 </div>
                                 <p>Manga longa</p>
@@ -56,19 +56,19 @@
                         <p>Escolha a gola</p>
                         <div class="op3">
                             <div class="opcao">
-                                <div class="icone">
+                                <div onclick="selecionargola(this)" class="icone">
                                     <img src="./imagens/GolaV.png">
                                 </div>
                                 <p>Gola V</p>
                             </div>
                             <div class="opcao">
-                                <div class="icone">
+                                <div onclick="selecionargola(this)" class="icone">
                                     <img src="./imagens/GolaRedonda.png">
                                 </div>
                                 <p>Gola redonda</p>
                             </div>
                             <div class="opcao">
-                                <div class="icone">
+                                <div onclick="selecionargola(this)" class="icone">
                                     <img src="./imagens/GolaPolo.png">
                                 </div>
                                 <p>Gola polo</p>
@@ -79,30 +79,30 @@
                         <p>Escolha o tecido</p>
                         <div class="op3">
                             <div class="opcao">
-                                <div class="icone">
+                                <div onclick="selecionartecido(this)" class="icone">
                                     <img src="./imagens/Seda.png">
                                 </div>
                                 <p>Seda</p>
                             </div>
                             <div class="opcao">
-                                <div class="icone">
+                                <div onclick="selecionartecido(this)" class="icone">
                                     <img src="./imagens/Algodão.png">
                                 </div>
                                 <p>Algodão</p>
                             </div>
                             <div class="opcao">
-                                <div class="icone">
+                                <div onclick="selecionartecido(this)" class="icone">
                                     <img src="./imagens/Poliester.png">
                                 </div>
                                 <p>Poliester</p>
                             </div>
                         </div>
                     </div>
-                    <div class="linkcamiseta">
+                    <div onclick="VerificarSelacao()" class="linkcamiseta">
                         <p>Imagem de referência</p>
                         <input type="Insira o link">
                     </div>
-                    <button class="pedido">
+                    <button class="pedido" disabled>
                         Confirmar pedido
                     </button>
                 </div>
@@ -113,19 +113,19 @@
         </div>
         <div class="baixo">
             <div class="ultpedidos">
-                    <p>Últimos pedidos</p>
-                    <div class="filtros">
-                        <button>Todos os modelos</button>
-                        <button>T-shirts</button>
-                        <button>Camiseta</button>
-                        <button>Manga longa</button>
-                    </div>
-                    <div class="pedidosantigos">
-                        <div class="antigos">
+                <p>Últimos pedidos</p>
+                <div class="filtros">
+                    <button>Todos os modelos</button>
+                    <button>T-shirts</button>
+                    <button>Camiseta</button>
+                    <button>Manga longa</button>
+                </div>
+                <div class="pedidosantigos">
+                    <div class="antigos">
                         <img src="./imagens/Blusa1.png">
                         <p>Criador: <strong>Agata</strong></p>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
