@@ -119,6 +119,7 @@ input {
     margin-top: 24px;
     background: #C4C4C4;
     border-radius: 10px;
+    margin-bottom: 39px;
 }
 
 .direita {
@@ -191,5 +192,68 @@ input {
 }
 
 .liberabotao{
-    background-color:  #32B72F;
+    background-color: #404EED;
+}
+
+.escondida{
+    display: none;
+}
+
+.sucesso p:nth-child(1){
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-left: 130px;
+    margin-top: 37px;
+    font-size: 36px;
+}
+
+.tempo{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-left: 130px;
+    font-size: 20px;
+    margin-bottom: 74px;
+    color: #404EED;
+}
+
+.sucesso{
+    width: 696px;
+    height: 702px;
+}
+
+.imgref{
+    margin-left: 130px;
+    width: 436px;
+    height: 524px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.erro{
+    width: 696px;
+    height: 702px;
+}
+
+.erro p:nth-child(1){
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-left: 205px;
+    margin-top: 37px;
+    font-size: 36px;
+}
+
+.erro p:nth-child(2){
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-left: 170px;
+    font-size: 20px;
+    margin-top: 8px;
+    color: #404EED;
+}
+
+.contador{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #404EED;
 }

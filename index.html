@@ -36,19 +36,19 @@
                                 <div onclick="selecionarmodelo(this)" class="icone">
                                     <img src="./imagens/tshirt.png">
                                 </div>
-                                <p>T-shirt</p>
+                                <p>t-shirt</p>
                             </div>
                             <div class="opcao">
                                 <div onclick="selecionarmodelo(this)" class="icone">
                                     <img src="./imagens/Camiseta.png">
                                 </div>
-                                <p>Camiseta</p>
+                                <p>top-tank</p>
                             </div>
                             <div class="opcao">
                                 <div onclick="selecionarmodelo(this)" class="icone">
                                     <img src="./imagens/Mangalonga.png">
                                 </div>
-                                <p>Manga longa</p>
+                                <p>long</p>
                             </div>
                         </div>
                     </div>
@@ -59,19 +59,19 @@
                                 <div onclick="selecionargola(this)" class="icone">
                                     <img src="./imagens/GolaV.png">
                                 </div>
-                                <p>Gola V</p>
+                                <p>v-neck</p>
                             </div>
                             <div class="opcao">
                                 <div onclick="selecionargola(this)" class="icone">
                                     <img src="./imagens/GolaRedonda.png">
                                 </div>
-                                <p>Gola redonda</p>
+                                <p>round</p>
                             </div>
                             <div class="opcao">
                                 <div onclick="selecionargola(this)" class="icone">
                                     <img src="./imagens/GolaPolo.png">
                                 </div>
-                                <p>Gola polo</p>
+                                <p>polo</p>
                             </div>
                         </div>
                     </div>
@@ -82,30 +82,41 @@
                                 <div onclick="selecionartecido(this)" class="icone">
                                     <img src="./imagens/Seda.png">
                                 </div>
-                                <p>Seda</p>
+                                <p>silk</p>
                             </div>
                             <div class="opcao">
                                 <div onclick="selecionartecido(this)" class="icone">
                                     <img src="./imagens/Algodão.png">
                                 </div>
-                                <p>Algodão</p>
+                                <p>cotton</p>
                             </div>
                             <div class="opcao">
                                 <div onclick="selecionartecido(this)" class="icone">
                                     <img src="./imagens/Poliester.png">
                                 </div>
-                                <p>Poliester</p>
+                                <p>polyester</p>
                             </div>
                         </div>
                     </div>
-                    <div onclick="VerificarSelacao()" class="linkcamiseta">
+                    <div class="linkcamiseta">
                         <p>Imagem de referência</p>
                         <input type="Insira o link">
                     </div>
-                    <button class="pedido" disabled>
+                    <button onclick="postRequest(), contar()" class="pedido" disabled>
                         Confirmar pedido
                     </button>
                 </div>
+            </div>
+            <div class="sucesso escondida">
+                <p>Pedido feito com sucesso</p>
+                <img class="imgref" src="./imagens/Blusa1.png">
+                <p class="tempo">Voltando para a pagina principal em <div class="contador">0</div> segundos</p>
+            </div>
+            <div class="erro escondida">
+                <p>Algo deu errado</p>
+                <p>A imagem deve possuir uma url valida</p>
+                <img class="imgref" src="./imagens/image 1.png">
+                <p class="tempo">Voltando para a pagina principal em <div class="contador">0</div> segundos</p>
             </div>
             <div class="direita">
                 <img src="./imagens/ilustração.png">
