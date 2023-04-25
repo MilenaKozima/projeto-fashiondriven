@@ -13,63 +13,63 @@ let inputteste = document.querySelector('input');
 // adiciona um evento de escuta para quando o usuário digitar ou apagar algo
 inputteste.addEventListener('input', () => {
     referencia = document.querySelector('input').value;
-  VerificarSelacao(); // chama a função verificar
+    VerificarSelacao(); // chama a função verificar
 })
 
-function VerificarSelacao(){
-    if (modelo !== ''){
-        if (gola !== ''){
-            if(tecido !== ''){
-                if(document.querySelector('input').value !== ''){
-                const pedidos = document.querySelector('.pedido');
-                pedidos.classList.add('liberabotao');
-                pedidos.removeAttribute('disabled');
-            } else {
-                const pedidos = document.querySelector('.pedido');
-                pedidos.classList.remove('liberabotao');
-                pedidos.addAttribute('disabled');
-            }
+function VerificarSelacao() {
+    if (modelo !== '') {
+        if (gola !== '') {
+            if (tecido !== '') {
+                if (document.querySelector('input').value !== '') {
+                    const pedidos = document.querySelector('.pedido');
+                    pedidos.classList.add('liberabotao');
+                    pedidos.removeAttribute('disabled');
+                } else {
+                    const pedidos = document.querySelector('.pedido');
+                    pedidos.classList.remove('liberabotao');
+                    pedidos.addAttribute('disabled');
+                }
             }
         }
     }
 }
 
-function selecionarmodelo(seletor){
+function selecionarmodelo(seletor) {
     let pai = seletor.parentNode;
     modelo = pai.querySelector('p').innerHTML;
     console.log(modelo);
 
     const selecionadoantes = document.querySelector('.selecionadamodelo');
 
-    if(selecionadoantes !== null){
+    if (selecionadoantes !== null) {
         selecionadoantes.classList.remove('selecionadamodelo');
     }
 
     seletor.classList.add('selecionadamodelo');
 }
 
-function selecionargola(seletor){
+function selecionargola(seletor) {
     let pai = seletor.parentNode;
     gola = pai.querySelector('p').innerHTML;
     console.log(gola);
 
     const selecionadoantes = document.querySelector('.selecionagola');
 
-    if(selecionadoantes !== null){
+    if (selecionadoantes !== null) {
         selecionadoantes.classList.remove('selecionagola');
     }
 
     seletor.classList.add('selecionagola');
 }
 
-function selecionartecido(seletor){
+function selecionartecido(seletor) {
     let pai = seletor.parentNode;
     tecido = pai.querySelector('p').innerHTML;
     console.log(tecido);
 
     const selecionadoantes = document.querySelector('.selecionadatecido');
 
-    if(selecionadoantes !== null){
+    if (selecionadoantes !== null) {
         selecionadoantes.classList.remove('selecionadatecido');
     }
 
@@ -104,6 +104,7 @@ function processarResposta(resposta) {
     sucesso.classList.remove('escondida');
     const esquerda = document.querySelector('.esquerda');
     esquerda.classList.add('escondida');
+    setTimeout(deucerto, 10000)
 }
 
 function processarErro(resposta) {
@@ -113,9 +114,10 @@ function processarErro(resposta) {
     erro.classList.remove('escondida');
     const esquerda = document.querySelector('.esquerda');
     esquerda.classList.add('escondida');
+    setTimeout(deuerrado, 10000)
 }
 
-function nome(){
+function nome() {
     nomeusu = prompt("Qual o seu nome ?");
     const elemento = document.querySelector('.usuario');
 
@@ -127,26 +129,52 @@ function nome(){
 
 nome();
 
-function camiseta(){
+function camiseta() {
     const elemento = document.querySelector('.sucesso');
     elemento.innerHTML = `         
     <p>Pedido feito com sucesso</p>
     <img class="imgref" src=${referencia}>
-    <p class="tempo">Voltando para a pagina principal em x segundos</p>`;
+    <p class="tempo">Voltando para a pagina principal em <strong class="contador">0</strong> segundos</p>`;
 }
 
 camiseta();
 
-function contar(){
+function contar() {
     idInterval = setInterval(cronometro, 1000);
 }
 
-function cronometro(){
-tempo--;
-if(tempo >= 0){
-const divcontador = document.querySelector('.contador');
-divcontador.innerHTML = tempo;
-} else{
-    clearInterval(idInterval);
+function cronometro() {
+    tempo--;
+    if (tempo >= 0) {
+        const divcontador = document.querySelector('.contador');
+        divcontador.innerHTML = tempo;
+    } else {
+        clearInterval(idInterval);
+        tempo = 10;
+    }
 }
+
+function deucerto() {
+    const sucesso = document.querySelector('.sucesso');
+    sucesso.classList.add('escondida');
+    const esquerda = document.querySelector('.esquerda');
+    esquerda.classList.remove('escondida');
+
+    const selecionatec = document.querySelector('.selecionadatecido');
+    selecionatec.classList.remove('selecionadatecido');
+
+    const selecionago = document.querySelector('.selecionagola');
+    selecionago.classList.remove('selecionagola');
+
+    const selecionamod = document.querySelector('.selecionadamodelo');
+    selecionamod.classList.remove('selecionadamodelo');
+
+    document.querySelector('input').value = '';
+}
+
+function deuerrado() {
+    const erro = document.querySelector('.erro');
+    erro.classList.add('escondida');
+    const esquerda = document.querySelector('.esquerda');
+    esquerda.classList.remove('escondida');
 }
