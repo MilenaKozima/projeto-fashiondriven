@@ -84,20 +84,6 @@ function getRequest() {
     promessa.catch(erroBuscarCamiseta);
 }
 
-
-/*function aparecercamiseta(){
-    let cami = document.querySelector('.antigos');
-
-    for (let i = 0; i<cami.lenght; i++){
-        let camise = camisetas[i];
-
-        cami.innerHTML += `
-        <img src="${camise.image}">
-        <p>Criador: <strong>${camise.author}</strong></p>
-        `;
-    }
-}*/
-
 function buscarCamisetas(resposta){
     console.log(resposta.data);
     camisetasant = resposta.data;
@@ -146,7 +132,8 @@ function processarResposta(resposta) {
     const esquerda = document.querySelector('.esquerda');
     esquerda.classList.add('escondida');
     camiseta();
-    setTimeout(deucerto, 10000)
+    setTimeout(deucerto, 10000);
+    getRequest();
 }
 
 function processarErro(resposta) {
@@ -156,7 +143,7 @@ function processarErro(resposta) {
     erro.classList.remove('escondida');
     const esquerda = document.querySelector('.esquerda');
     esquerda.classList.add('escondida');
-    setTimeout(deuerrado, 10000)
+    setTimeout(deuerrado, 10000);
 }
 
 function nome() {
@@ -222,3 +209,83 @@ function deuerrado() {
     const esquerda = document.querySelector('.esquerda');
     esquerda.classList.remove('escondida');
 }
+
+function buscartshirts(){
+
+    const filtro1 = document.querySelector('.ts');
+    filtro1.classList.add('liberabotao');
+    const filtro2 = document.querySelector('.camis');
+    filtro2.classList.remove('liberabotao');
+    const filtro3 = document.querySelector('.longa');
+    filtro3.classList.remove('liberabotao');
+    const filtro4 = document.querySelector('.tudo');
+    filtro4.classList.remove('liberabotao');
+
+    const tshirts = camisetasant.filter((camisetasant) => camisetasant.model === "t-shirt");
+let cami = document.querySelector('.antigos');
+cami.innerHTML = '';
+
+for (let i = 0; i<tshirts.length; i++){
+    let camise = tshirts[i];
+    console.log(camise);
+
+    cami.innerHTML += `
+    <img class="criadas" src=${camise.image}>
+    <p>Criador: <strong>${camise.owner}</strong></p>
+    `;
+}
+}
+
+function buscarcamis(){
+
+
+    const filtro1 = document.querySelector('.ts');
+    filtro1.classList.remove('liberabotao');
+    const filtro2 = document.querySelector('.camis');
+    filtro2.classList.add('liberabotao');
+    const filtro3 = document.querySelector('.longa');
+    filtro3.classList.remove('liberabotao');
+    const filtro4 = document.querySelector('.tudo');
+    filtro4.classList.remove('liberabotao');
+
+    const camis = camisetasant.filter((camisetasant) => camisetasant.model === "top-tank");
+    let cami = document.querySelector('.antigos');
+    cami.innerHTML = '';
+    
+    for (let i = 0; i<camis.length; i++){
+        let camise = camis[i];
+        console.log(camise);
+    
+        cami.innerHTML += `
+        <img class="criadas" src=${camise.image}>
+        <p>Criador: <strong>${camise.owner}</strong></p>
+        `;
+    }
+    }
+
+    function buscarlonga(){
+
+
+        const filtro1 = document.querySelector('.ts');
+        filtro1.classList.remove('liberabotao');
+        const filtro2 = document.querySelector('.camis');
+        filtro2.classList.remove('liberabotao');
+        const filtro3 = document.querySelector('.longa');
+        filtro3.classList.add('liberabotao');
+        const filtro4 = document.querySelector('.tudo');
+        filtro4.classList.remove('liberabotao');
+
+        const longa = camisetasant.filter((camisetasant) => camisetasant.model === "long");
+        let cami = document.querySelector('.antigos');
+        cami.innerHTML = '';
+        
+        for (let i = 0; i<longa.length; i++){
+            let camise = longa[i];
+            console.log(camise);
+        
+            cami.innerHTML += `
+            <img class="criadas" src=${camise.image}>
+            <p>Criador: <strong>${camise.owner}</strong></p>
+            `;
+        }
+        }
