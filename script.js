@@ -5,6 +5,7 @@ let referencia = '';
 let nomeusu = '';
 let tempo = 10;
 let idInterval;
+let camisetasant = [];
 
 axios.defaults.headers.common['Authorization'] = 'xLBzuiWi6qYVmyUXY7S8o3l7';
 
@@ -13,6 +14,7 @@ let inputteste = document.querySelector('input');
 // adiciona um evento de escuta para quando o usuário digitar ou apagar algo
 inputteste.addEventListener('input', () => {
     referencia = document.querySelector('input').value;
+    console.log(referencia);
     VerificarSelacao(); // chama a função verificar
 })
 
@@ -78,8 +80,47 @@ function selecionartecido(seletor) {
 
 function getRequest() {
     const promessa = axios.get('https://mock-api.driven.com.br/api/v4/shirts-api/shirts');
-    promessa.then(processarResposta);
-    promessa.catch(processarErro);
+    promessa.then(buscarCamisetas);
+    promessa.catch(erroBuscarCamiseta);
+}
+
+
+/*function aparecercamiseta(){
+    let cami = document.querySelector('.antigos');
+
+    for (let i = 0; i<cami.lenght; i++){
+        let camise = camisetas[i];
+
+        cami.innerHTML += `
+        <img src="${camise.image}">
+        <p>Criador: <strong>${camise.author}</strong></p>
+        `;
+    }
+}*/
+
+function buscarCamisetas(resposta){
+    console.log(resposta.data);
+    camisetasant = resposta.data;
+    console.log(camisetasant);
+
+    let cami = document.querySelector('.antigos');
+    console.log(cami.innerHTML);
+    cami.innerHTML = '';
+
+    for (let i = 0; i<camisetasant.length; i++){
+        let camise = camisetasant[i];
+        console.log(camise);
+
+        cami.innerHTML += `
+        <img class="criadas" src=${camise.image}>
+        <p>Criador: <strong>${camise.owner}</strong></p>
+        `;
+    }
+}
+
+
+function erroBuscarCamiseta(erro){
+    console.log(erro);
 }
 
 function postRequest() {
@@ -104,6 +145,7 @@ function processarResposta(resposta) {
     sucesso.classList.remove('escondida');
     const esquerda = document.querySelector('.esquerda');
     esquerda.classList.add('escondida');
+    camiseta();
     setTimeout(deucerto, 10000)
 }
 
@@ -125,19 +167,21 @@ function nome() {
     Olá, <strong class="nome">${nomeusu}!</strong>
     `;
 
+    getRequest();
 }
 
 nome();
 
 function camiseta() {
     const elemento = document.querySelector('.sucesso');
+    referencia = document.querySelector('input').value;
     elemento.innerHTML = `         
     <p>Pedido feito com sucesso</p>
     <img class="imgref" src=${referencia}>
     <p class="tempo">Voltando para a pagina principal em <strong class="contador">0</strong> segundos</p>`;
 }
 
-camiseta();
+
 
 function contar() {
     idInterval = setInterval(cronometro, 1000);
