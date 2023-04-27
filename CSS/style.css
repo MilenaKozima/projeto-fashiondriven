@@ -165,7 +165,7 @@ input {
     justify-content: space-between;
 }
 
-.filtros button {
+.tudo, .ts, .camis, .longa {
     border-radius: 10px;
     height: 36px;
     background-color: #C4C4C4;
@@ -179,18 +179,29 @@ input {
 .pedidosantigos {
     display: flex;
     margin-top: 25px;
+    height: 256px;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: scroll;
 }
 
 .antigos {
+    width: 215px;
+    height: 256px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 18px;
+    margin-bottom: 18px;
+    background-color: #FFFFFF;
 }
 
 .antigos p {
+    margin-top: 9px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
