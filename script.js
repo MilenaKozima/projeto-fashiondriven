@@ -316,26 +316,5 @@ function buscarTodas() {
 }
 
 function confirma() {
-    body = {
-        model: camisetasant.model,
-        neck: gola,
-        material: tecido,
-        image: referencia,
-        owner: nomeusu,
-        author: nomeusu
-    }
-    const promessa = axios.post('https://mock-api.driven.com.br/api/v4/shirts-api/shirts', body);
-    promessa.then(confirmacerto);
-    promessa.catch(confirmaerrado);
-}
-
-function confirmacerto(resposta){
-    console.log('SUCESSO', resposta.data);
-    alert('Pedido feito :)');
-}
-
-
-function confirmaerrado(resposta){
-    console.error('ERROR', resposta);
-    console.error('ERROR MESSAGE', resposta.response.data.message);
+    alert('Pedido confirmado');
 }
