@@ -316,5 +316,9 @@ function buscarTodas() {
 }
 
 function confirma() {
-    alert('Pedido confirmado');
+    let resposta = confirm('Deseja encomendar essa camiseta?');
+
+    if(resposta == true){
+alert('Pedido confirmado');
+    }
 }
